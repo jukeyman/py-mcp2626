@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "__PACKAGE_NAME__"
+version = "0.1.0"
+description = "Generated Python MCP starter"
+requires-python = ">=3.11"
+dependencies = ["fastmcp>=2.10.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
