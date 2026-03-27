@@ -1,0 +1,19 @@
+{
+  "name": "py-type",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.8.1",
+  "scripts": {
+    "build": "turbo run build",
+    "dev:ts": "pnpm --filter ts-mcp-server dev",
+    "test:ts": "pnpm --filter ts-mcp-server test",
+    "lint:ts": "pnpm --filter ts-mcp-server lint",
+    "ci:py": "py -3 -m pytest apps/py-mcp-server/tests",
+    "new:ts": "node scripts/new-server.mjs --language ts",
+    "new:py": "node scripts/new-server.mjs --language py",
+    "package:release": "powershell -ExecutionPolicy Bypass -File scripts/package-release.ps1"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0"
+  }
+}
